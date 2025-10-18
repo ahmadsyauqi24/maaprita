@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maaf, Rita</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #e0e0e0;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px 50px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      max-width: 520px;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #d3d3d3;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #3a7bd5;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 114, 255, 0.4);
+    }
+
+    .divider {
+      width: 50px;
+      height: 3px;
+      background: #00aaff;
+      margin: 0 auto 20px;
+      border-radius: 2px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Dear, rita mustika</h1>
+    <div class="divider"></div>
+    <p>aku minta maaf kalau selama ini ada sikap atau kata-kata aku yang bikin kamu kecewa. Kadang aku terlalu egois buat ngeliat dari sisi kamu, dan kadang aku emosi dengan kata kata aku yang bisa bikin kamu sakit hati itu salah aku sepenuhnya.</p>
+    <p>aku nggak bakal maksa buat semuanya balik kayak dulu, tapi aku pengen kamu tahu kalau aku tulus nyesel dan pengen perbaiki yang rusak — pelan-pelan, tanpa drama.</p>
+    <button onclick="showMessage()">KLIK AKU DONG CANTIK</button>
+    <footer>Ditulis dengan tenang, dan dari hati yang dalam.</footer>
+  </div>
+
+  <script>
+    function showMessage() {
+      const msg = document.createElement('div');
+      msg.textContent = 'SEMANGAT KERJANYA YAAA, DAN JAGA KESEHATAN JANGAN TELAT MAKAN.';
+      msg.style.position = 'fixed';
+      msg.style.bottom = '30px';
+      msg.style.left = '50%';
+      msg.style.transform = 'translateX(-50%)';
+      msg.style.background = 'rgba(0, 114, 255, 0.2)';
+      msg.style.padding = '10px 20px';
+      msg.style.borderRadius = '10px';
+      msg.style.color = '#e0e0e0';
+      msg.style.fontWeight = '500';
+      msg.style.backdropFilter = 'blur(6px)';
+      document.body.appendChild(msg);
+      setTimeout(() => msg.remove(), 3000);
+    }
+  </script>
+</body>
+</html>
